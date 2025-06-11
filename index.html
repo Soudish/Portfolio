@@ -3,11 +3,17 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Soudish Laha - Portfolio</title>
     <link rel="stylesheet" href="style.css">
-   
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Eagle+Lake&family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
 </head>
 <body>
+    <div class="cursor"></div>
+    <div class="cursor-follower"></div>
+
     <nav class="navbar" id="navbar">
         <div class="nav-container">
             <a href="#home" class="logo">Portfolio</a>
@@ -17,6 +23,7 @@
                 <li><a href="#skills" class="nav-link" data-section="skills">Skills</a></li>
                 <li><a href="#projects" class="nav-link" data-section="projects">Projects</a></li>
                 <li><a href="#contact" class="nav-link" data-section="contact">Contact Me</a></li>
+                <li><a href="#resume" class="nav-link" data-section="resume">Resume</a></li>
             </ul>
 
             <div class="hamburger" id="hamburger">
@@ -26,20 +33,81 @@
             </div>
         </div>
     </nav>
-     <div class="content">
+
+    <div class="content">
         <section id="home" class="section">
-            <h1>Welcome to My Portfolio</h1>
+            <div class="home-wrapper">
+                <div class="picture" data-aos="fade-right">
+                    <div class="profile-pic-container">
+                        <img src="picture1.jpg" alt="Profile Picture" class="profile-pic" />
+                       
+                    </div>
+                </div>
+                <div class="intro-block" data-aos="fade-left">
+                    <h1 class="intro">Hi, I am <strong>Soudish Laha</strong></h1>
+                    <div class="typewriter">I am a <span id="changing-text"></span></div>
+                    <div class="cta-buttons">
+                        <a href="#contact" class="cta-primary">Get in Touch</a>
+                        <a href="#projects" class="cta-secondary">View Work</a>
+                    </div>
+                </div>
+            </div>
         </section>
+
         <section id="skills" class="section">
-            <h1>My Skills</h1>
+            <h2 class="section-title" data-aos="fade-up">My Skills</h2>
+            <div class="skills-grid">
+                <div class="skill-card" data-aos="zoom-in">
+                    <div class="skill-icon">🎨</div>
+                    <h3>Frontend Development</h3>
+                    <p>HTML5, CSS3, JavaScript, React</p>
+                </div>
+                <div class="skill-card" data-aos="zoom-in" data-aos-delay="100">
+                    <div class="skill-icon">💻</div>
+                    <h3>Backend Development</h3>
+                    <p>Node.js, Express, MongoDB</p>
+                </div>
+                <div class="skill-card" data-aos="zoom-in" data-aos-delay="200">
+                    <div class="skill-icon">🎯</div>
+                    <h3>UI/UX Design</h3>
+                    <p>Figma, Adobe XD, Photoshop</p>
+                </div>
+            </div>
         </section>
+
         <section id="projects" class="section">
-            <h1>My Projects</h1>
+            <h2 class="section-title" data-aos="fade-up">My Projects</h2>
+            <div class="projects-grid">
+                <div class="project-card" data-aos="fade-up">
+                    <div class="project-image"></div>
+                    <div class="project-content">
+                        <h3>Project One</h3>
+                        <p>A brief description of the project goes here.</p>
+                        <div class="project-links">
+                            <a href="#" class="project-link">View Live</a>
+                            <a href="#" class="project-link">GitHub</a>
+                        </div>
+                    </div>
+                </div>
+                <!-- Add more project cards as needed -->
+            </div>
         </section>
+
         <section id="contact" class="section">
-            <h1>Contact Me</h1>
+            <h2 class="section-title" data-aos="fade-up">Contact Me</h2>
+            <div class="contact-container">
+                <form class="contact-form" data-aos="fade-up">
+                    <input type="text" placeholder="Your Name" required>
+                    <input type="email" placeholder="Your Email" required>
+                    <textarea placeholder="Your Message" required></textarea>
+                    <button type="submit" class="submit-btn">Send Message</button>
+                </form>
+            </div>
         </section>
     </div>
-     <script src="script.js"></script>
+
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="script.js"></script>
+    
 </body>
 </html>
