@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,9 +8,14 @@
     <link rel="stylesheet" href="style.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Eagle+Lake&family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Eagle+Lake&family=Poppins:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
 </head>
+
 <body>
     <div class="cursor"></div>
     <div class="cursor-follower"></div>
@@ -17,13 +23,13 @@
     <nav class="navbar" id="navbar">
         <div class="nav-container">
             <a href="#home" class="logo">Portfolio</a>
-            
+
             <ul class="nav-menu" id="nav-menu">
                 <li><a href="#home" class="nav-link active" data-section="home">Home</a></li>
                 <li><a href="#skills" class="nav-link" data-section="skills">Skills</a></li>
                 <li><a href="#projects" class="nav-link" data-section="projects">Projects</a></li>
                 <li><a href="#contact" class="nav-link" data-section="contact">Contact Me</a></li>
-                <li><a href="#resume" class="nav-link" data-section="resume">Resume</a></li>
+
             </ul>
 
             <div class="hamburger" id="hamburger">
@@ -40,7 +46,7 @@
                 <div class="picture" data-aos="fade-right">
                     <div class="profile-pic-container">
                         <img src="picture1.jpg" alt="Profile Picture" class="profile-pic" />
-                       
+
                     </div>
                 </div>
                 <div class="intro-block" data-aos="fade-left">
@@ -53,27 +59,83 @@
                 </div>
             </div>
         </section>
+        <section id="skills" class="skills-section">
+            <div class="skills-container">
+                <div class="skills-header">
+                    <h2>Skills & Expertise</h2>
+                    <p>Here's a showcase of my technical skills and proficiency levels. I'm passionate about continuous
+                        learning and staying updated with the latest technologies.</p>
+                </div>
 
-        <section id="skills" class="section">
-            <h2 class="section-title" data-aos="fade-up">My Skills</h2>
-            <div class="skills-grid">
-                <div class="skill-card" data-aos="zoom-in">
-                    <div class="skill-icon">🎨</div>
-                    <h3>Frontend Development</h3>
-                    <p>HTML5, CSS3, JavaScript, React</p>
+                <div class="resume-section">
+                    <a href="#" class="resume-btn" id="resumeBtn">📄 Download Resume</a>
                 </div>
-                <div class="skill-card" data-aos="zoom-in" data-aos-delay="100">
-                    <div class="skill-icon">💻</div>
-                    <h3>Backend Development</h3>
-                    <p>Node.js, Express, MongoDB</p>
-                </div>
-                <div class="skill-card" data-aos="zoom-in" data-aos-delay="200">
-                    <div class="skill-icon">🎯</div>
-                    <h3>UI/UX Design</h3>
-                    <p>Figma, Adobe XD, Photoshop</p>
+
+                <div class="skills-grid">
+                    <div class="skill-item" data-skill="html" data-percentage="95">
+                        <div class="skill-header">
+                            <span class="skill-name">HTML</span>
+                            <span class="skill-percentage">0%</span>
+                        </div>
+                        <div class="progress-bar">
+                            <div class="progress-fill"></div>
+                        </div>
+                    </div>
+
+                    <div class="skill-item" data-skill="css" data-percentage="90">
+                        <div class="skill-header">
+                            <span class="skill-name">CSS</span>
+                            <span class="skill-percentage">0%</span>
+                        </div>
+                        <div class="progress-bar">
+                            <div class="progress-fill"></div>
+                        </div>
+                    </div>
+
+                    <div class="skill-item" data-skill="javascript" data-percentage="30">
+                        <div class="skill-header">
+                            <span class="skill-name">JavaScript</span>
+                            <span class="skill-percentage">0%</span>
+                        </div>
+                        <div class="progress-bar">
+                            <div class="progress-fill"></div>
+                        </div>
+                    </div>
+
+                    <div class="skill-item" data-skill="python" data-percentage="50">
+                        <div class="skill-header">
+                            <span class="skill-name">Python</span>
+                            <span class="skill-percentage">0%</span>
+                        </div>
+                        <div class="progress-bar">
+                            <div class="progress-fill"></div>
+                        </div>
+                    </div>
+
+                    <div class="skill-item" data-skill="java" data-percentage="0">
+                        <div class="skill-header">
+                            <span class="skill-name">Java</span>
+                            <span class="skill-percentage">0%</span>
+                        </div>
+                        <div class="progress-bar">
+                            <div class="progress-fill"></div>
+                        </div>
+                    </div>
+
+                    <div class="skill-item" data-skill="c" data-percentage="85">
+                        <div class="skill-header">
+                            <span class="skill-name">C Programming</span>
+                            <span class="skill-percentage">0%</span>
+                        </div>
+                        <div class="progress-bar">
+                            <div class="progress-fill"></div>
+                        </div>
+                    </div>
                 </div>
             </div>
         </section>
+
+
 
         <section id="projects" class="section">
             <h2 class="section-title" data-aos="fade-up">My Projects</h2>
@@ -96,18 +158,42 @@
         <section id="contact" class="section">
             <h2 class="section-title" data-aos="fade-up">Contact Me</h2>
             <div class="contact-container">
-                <form class="contact-form" data-aos="fade-up">
-                    <input type="text" placeholder="Your Name" required>
-                    <input type="email" placeholder="Your Email" required>
-                    <textarea placeholder="Your Message" required></textarea>
+                <form class="contact-form" data-aos="fade-up" action="https://formspree.io/f/xanjolbl" method="POST">
+                    <input type="text" name="name" placeholder="Your Name" required>
+                    <input type="email" name="email" placeholder="Your Email" required>
+                    <textarea name="message" placeholder="Your Message" required></textarea>
                     <button type="submit" class="submit-btn">Send Message</button>
-                </form>
+
             </div>
+            <div class="social-buttons">
+                <a href="https://www.instagram.com/soudish__laha" target="_blank" class="social-btn icon-btn instagram"
+                    title="Instagram" data-aos="fade-up" data-aos-delay="100">
+                    <i class="fab fa-instagram"></i>
+                </a>
+
+                <a href="https://github.com/Soudish" target="_blank" class="social-btn icon-btn github"
+                    title="GitHub" data-aos="fade-up" data-aos-delay="200">
+                    <i class="fab fa-github"></i>
+                </a>
+
+                <a href="https://www.linkedin.com/in/soudish-laha" target="_blank" class="social-btn icon-btn linkedin"
+                    title="LinkedIn" data-aos="fade-up" data-aos-delay="300">
+                    <i class="fab fa-linkedin-in"></i>
+                </a>
+            </div>
+
+
+
+
+
         </section>
     </div>
 
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script src="script.js"></script>
-    
+    <script src="https://cdn.jsdelivr.net/npm/vanta/dist/vanta.waves.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r134/three.min.js"></script>
+
 </body>
+
 </html>
