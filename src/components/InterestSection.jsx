@@ -15,9 +15,9 @@ const containerVariants = {
 
 const cardVariants = {
   hidden: { y: 20, opacity: 0, scale: 0.9 },
-  visible: { 
-    y: 0, 
-    opacity: 1, 
+  visible: {
+    y: 0,
+    opacity: 1,
     scale: 1,
     transition: { type: "spring", stiffness: 100, damping: 12 }
   }
@@ -33,19 +33,19 @@ const InterestModule = ({ title, subtitle, icon, details }) => {
       {/* Terminal Window Header */}
       <div className="bg-cyan-950/40 border-t border-l border-r border-cyan-500/30 px-3 py-1.5 flex justify-between items-center backdrop-blur-md relative overflow-hidden">
         {/* Animated Scanline for the header */}
-        <motion.div 
+        <motion.div
           animate={{ x: ["-100%", "100%"] }}
           transition={{ duration: 3, repeat: Infinity, ease: "linear" }}
           className="absolute inset-0 bg-gradient-to-r from-transparent via-cyan-500/10 to-transparent pointer-events-none"
         />
-        
+
         <div className="flex gap-1.5 relative z-10">
           <div className="w-1.5 h-1.5 rounded-full bg-red-500/50" />
           <div className="w-1.5 h-1.5 rounded-full bg-yellow-500/50" />
-          <motion.div 
+          <motion.div
             animate={{ opacity: [1, 0.4, 1] }}
             transition={{ duration: 2, repeat: Infinity }}
-            className="w-1.5 h-1.5 rounded-full bg-cyan-500" 
+            className="w-1.5 h-1.5 rounded-full bg-cyan-500"
           />
         </div>
         <span className="text-[7px] font-mono text-cyan-500/60 uppercase tracking-widest relative z-10">{title}</span>
@@ -53,13 +53,13 @@ const InterestModule = ({ title, subtitle, icon, details }) => {
 
       {/* Content Body */}
       <div className="relative bg-slate-950/60 border-b border-l border-r border-cyan-500/20 p-5 backdrop-blur-xl shadow-[0_10px_30px_rgba(0,0,0,0.5)] group-hover:border-cyan-400/50 transition-all duration-300">
-        
+
         {/* Glow effect that intensifies on hover */}
         <div className="absolute inset-0 bg-cyan-500/0 group-hover:bg-cyan-500/[0.03] transition-colors pointer-events-none" />
 
         <div className="flex items-center gap-4 relative z-10">
           {/* Animated Icon Container */}
-          <motion.div 
+          <motion.div
             whileHover={{ rotate: [0, -10, 10, 0] }}
             transition={{ duration: 0.5 }}
             className="w-10 h-10 shrink-0 border border-cyan-900 flex items-center justify-center text-xl text-cyan-500 bg-cyan-500/5 shadow-[inset_0_0_10px_rgba(34,211,238,0.1)] group-hover:shadow-[0_0_15px_rgba(34,211,238,0.3)] transition-all"
@@ -72,8 +72,8 @@ const InterestModule = ({ title, subtitle, icon, details }) => {
               {subtitle}
             </h3>
             <div className="flex items-center gap-2">
-               <span className="h-1 w-1 bg-cyan-500 rounded-full animate-ping" />
-               <p className="text-[8px] font-mono text-cyan-800 uppercase tracking-tighter">PROCESS_ACTIVE</p>
+              <span className="h-1 w-1 bg-cyan-500 rounded-full animate-ping" />
+              <p className="text-[8px] font-mono text-cyan-800 uppercase tracking-tighter">PROCESS_ACTIVE</p>
             </div>
           </div>
         </div>
@@ -84,7 +84,7 @@ const InterestModule = ({ title, subtitle, icon, details }) => {
 
         {/* Floating "Bits" decoration inside the card */}
         <div className="absolute bottom-1 right-2 opacity-10 pointer-events-none">
-           <p className="text-[6px] font-mono text-cyan-500 uppercase tracking-widest">SECURE_THREAD</p>
+          <p className="text-[6px] font-mono text-cyan-500 uppercase tracking-widest">SECURE_THREAD</p>
         </div>
       </div>
     </motion.div>
@@ -103,7 +103,7 @@ export default function InterestsSection() {
 
   return (
     <section id="interests" className="relative py-24 px-6 md:px-12 bg-transparent overflow-hidden">
-      
+
       {/* 2. LOCAL BACKGROUND ANIMATION: Falling "01" Binary bits */}
       <div className="absolute inset-0 pointer-events-none opacity-[0.05] z-0">
         {[...Array(20)].map((_, i) => (
@@ -111,10 +111,10 @@ export default function InterestsSection() {
             key={i}
             initial={{ y: -20, x: `${Math.random() * 100}%`, opacity: 0 }}
             animate={{ y: 800, opacity: [0, 1, 0] }}
-            transition={{ 
-              duration: Math.random() * 10 + 5, 
-              repeat: Infinity, 
-              delay: Math.random() * 5 
+            transition={{
+              duration: Math.random() * 10 + 5,
+              repeat: Infinity,
+              delay: Math.random() * 5
             }}
             className="absolute text-cyan-500 font-mono text-[10px]"
           >
@@ -125,20 +125,20 @@ export default function InterestsSection() {
 
       <div className="relative z-10 max-w-7xl mx-auto">
         {/* Section Header with "Glitch" intro */}
-        <motion.div 
+        <motion.div
           initial={{ opacity: 0, x: -20 }}
           whileInView={{ opacity: 1, x: 0 }}
           viewport={{ once: true }}
           className="mb-16"
         >
-          
-          <h2 className="text-4xl md:text-7xl font-black text-white italic tracking-tighter uppercase leading-none">
-            EXTERNAL.<span className="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-purple-600 drop-shadow-[0_0_15px_rgba(34,211,238,0.3)]">THREADS</span>
+
+          <h2 className="text-6xl md:text-9xl font-black text-white italic tracking-tighter leading-none uppercase">
+            EXT.<span className="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 via-blue-500 to-purple-600 drop-shadow-[0_0_20px_rgba(34,211,238,0.4)] py-2 inline-block pr-12">THREADS</span>
           </h2>
         </motion.div>
 
         {/* 3. STAGGERED GRID */}
-        <motion.div 
+        <motion.div
           variants={containerVariants}
           initial="hidden"
           whileInView="visible"
@@ -151,7 +151,7 @@ export default function InterestsSection() {
         </motion.div>
 
         {/* Metadata Footer */}
-        
+
       </div>
     </section>
   );

@@ -40,19 +40,19 @@ export default function ContactSection() {
   return (
     <section id="contact" className="relative py-24 px-6 md:px-12 bg-transparent overflow-hidden">
       <div className="relative z-10 max-w-7xl mx-auto">
-        
+
         {/* Section Title with Glitch Aesthetics */}
         <div className="mb-20">
-          
-          <h2 className="text-5xl md:text-8xl font-black text-white italic tracking-tighter uppercase leading-none">
-            COMM.<span className="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-purple-600 drop-shadow-[0_0_20px_rgba(34,211,238,0.4)] py-2 inline-block pr-12">TERMINAL</span>
+
+          <h2 className="text-6xl md:text-9xl font-black text-white italic tracking-tighter leading-none uppercase">
+            COMM.<span className="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 via-blue-500 to-purple-600 drop-shadow-[0_0_20px_rgba(34,211,238,0.4)] py-2 inline-block pr-12">TERMINAL</span>
           </h2>
         </div>
 
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-16 items-center">
-          
+
           {/* --- LEFT: HOLOGRAPHIC SVG AREA --- */}
-          <motion.div 
+          <motion.div
             initial={{ opacity: 0, x: -50 }}
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true }}
@@ -60,9 +60,9 @@ export default function ContactSection() {
           >
             {/* Holographic Projection Base */}
             <div className="relative z-10 brightness-110 contrast-125 grayscale-[20%] hover:grayscale-0 transition-all duration-500">
-               <Lottie animationData={connectAnimation} loop={true} />
+              <Lottie animationData={connectAnimation} loop={true} />
             </div>
-            
+
             {/* Ambient Glow & Radar Sweep */}
             <div className="absolute bottom-10 left-1/2 -translate-x-1/2 w-64 h-4 bg-cyan-500/20 blur-3xl animate-pulse" />
             <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-full h-full border border-cyan-500/5 rounded-full animate-[ping_4s_linear_infinite]" />
@@ -77,7 +77,7 @@ export default function ContactSection() {
           </motion.div>
 
           {/* --- RIGHT: THE INTERACTIVE TERMINAL --- */}
-          <motion.div 
+          <motion.div
             initial={{ opacity: 0, x: 50 }}
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true }}
@@ -85,7 +85,7 @@ export default function ContactSection() {
           >
             {/* Terminal Window Frame */}
             <div className="relative bg-slate-950/80 border-2 border-cyan-500/20 p-8 backdrop-blur-xl overflow-hidden shadow-[0_0_50px_rgba(0,0,0,0.5)]">
-              
+
               {/* Scanline & Noise Overlays */}
               <div className="absolute inset-0 pointer-events-none bg-[linear-gradient(transparent_50%,rgba(0,0,0,0.1)_50%)] bg-[length:100%_4px] opacity-30" />
               <div className="absolute inset-0 pointer-events-none opacity-[0.03] bg-[url('https://grainy-gradients.vercel.app/noise.svg')]" />
@@ -121,13 +121,13 @@ export default function ContactSection() {
               {/* SUCCESS OVERLAY: Triggered on Packet Delivery */}
               <AnimatePresence>
                 {isSuccess && (
-                  <motion.div 
+                  <motion.div
                     initial={{ opacity: 0, clipPath: "inset(0 0 100% 0)" }}
                     animate={{ opacity: 1, clipPath: "inset(0 0 0% 0)" }}
                     exit={{ opacity: 0 }}
                     className="absolute inset-0 z-50 bg-cyan-500 flex flex-col items-center justify-center text-black p-10 text-center"
                   >
-                    <motion.div 
+                    <motion.div
                       animate={{ scale: [1, 1.2, 1], rotate: [0, 5, -5, 0] }}
                       transition={{ repeat: Infinity, duration: 2 }}
                       className="text-7xl mb-6 font-black"
@@ -151,7 +151,7 @@ export default function ContactSection() {
         </div>
 
         {/* System Footer Log */}
-        
+
       </div>
     </section>
   );

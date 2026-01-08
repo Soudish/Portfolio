@@ -13,8 +13,8 @@ const BlockProgressBar = ({ level }) => {
         <motion.div
           key={i}
           initial={{ opacity: 0, backgroundColor: "#0f172a" }}
-          whileInView={{ 
-            opacity: 1, 
+          whileInView={{
+            opacity: 1,
             backgroundColor: i < filledBlocks ? "#22d3ee" : "#0f172a",
             boxShadow: i < filledBlocks ? "0 0 15px rgba(34, 211, 238, 0.7)" : "none"
           }}
@@ -66,13 +66,13 @@ export default function SkillsSection() {
 
   return (
     <section id="skills" className="relative min-h-screen py-24 px-6 md:px-12 bg-transparent overflow-hidden">
-      
+
       {/* --- NEW: BACKGROUND AI BRAIN ANIMATION --- */}
       <div className="absolute inset-0 flex items-center justify-center pointer-events-none z-0">
         <div className="w-full max-w-4xl opacity-10 md:opacity-15 grayscale contrast-125 brightness-150">
-          <Lottie 
-            animationData={brainAnimation} 
-            loop={true} 
+          <Lottie
+            animationData={brainAnimation}
+            loop={true}
             style={{ filter: 'drop-shadow(0 0 50px rgba(34,211,238,0.2))' }}
           />
         </div>
@@ -81,12 +81,8 @@ export default function SkillsSection() {
       <div className="relative z-10 max-w-7xl mx-auto">
         {/* Section Title */}
         <div className="mb-24 text-center md:text-left">
-          
-          <h2 className="text-6xl sm:text-7xl md:text-9xl font-black text-white leading-none tracking-tighter italic overflow-visible">
-            CORE <br />
-            <span className="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 via-blue-500 to-purple-600 drop-shadow-[0_0_20px_rgba(34,211,238,0.4)] py-2 inline-block pr-12">
-              SYSCAP.LOG
-            </span>
+          <h2 className="text-6xl md:text-9xl font-black text-white italic tracking-tighter leading-none uppercase">
+            CORE.<span className="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 via-blue-500 to-purple-600 drop-shadow-[0_0_20px_rgba(34,211,238,0.4)] py-2 inline-block pr-12">SYSCAP.LOG</span>
           </h2>
         </div>
 
@@ -98,7 +94,7 @@ export default function SkillsSection() {
         </div>
 
         {/* Metadata Footer */}
-        
+
       </div>
     </section>
   );
